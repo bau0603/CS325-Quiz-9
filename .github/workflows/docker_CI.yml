@@ -1,0 +1,21 @@
+name: Docker CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Docker image
+      run: docker build -t bau0603siue/cs325-quiz-9 .
+
+    - name: Run tests in Docker container
+      run: docker run bau0603siue/cs325-quiz-9
