@@ -13,7 +13,7 @@ def test_count_words():
     # Test with unique words
     assert count_words("Write clean, modular, and testable Python code.") == 7
     # Test with multiple spaces
-    assert count_words("   Leading and trailing spaces   ") == 5
+    assert count_words("   Leading and trailing spaces   ") == 4
 
 
 def test_count_chars():
@@ -27,7 +27,7 @@ def test_count_chars():
     # Test with single word
     assert count_chars("Hello") == 5
     # Test with unique words
-    assert count_chars("Write clean, modular, and testable Python code.") == 49
+    assert count_chars("Write clean, modular, and testable Python code.") == 47
     # Test with multiple spaces
     assert count_chars("   Leading and trailing spaces   ") == 33
 
